@@ -9,9 +9,9 @@ const startPauseBt = document.querySelector('#start-pause')
 const musicaFocoInput = document.querySelector('#alternar-musica')
 const iniciarOuPasarBt = document.querySelector('#start-pause span')
 const iniciarOuPasarImg = document.querySelector('.app__card-primary-butto-icon')
-const musica = new Audio('/sons/luna-rise-part-one.mp3')
-const audioPlay = new Audio('/sons/play.wav')
-const audioPause = new Audio('/sons/pause.mp3')
+const musica = new Audio('./sons/luna-rise-part-one.mp3')
+const audioPlay = new Audio('./sons/play.wav')
+const audioPause = new Audio('./sons/pause.mp3')
 const audioTempoFinalizado = new Audio('/sons/beep.mp3')
 const tempoNaTela = document.querySelector('#timer')
 musica.loop = true
@@ -53,7 +53,7 @@ function alterarContexto (contexto) {
         contexto.classList.remove('active')
     })
     html.setAttribute('data-contexto', contexto)
-    banner.setAttribute('src', `/imagens/${contexto}.png`)
+    banner.setAttribute('src', `./imagens/${contexto}.png`)
     switch (contexto) {
         case "foco":
             titulo.innerHTML = `Otimize sua produtividade,<br>
